@@ -1,0 +1,28 @@
+{
+  "city": "Kolkata",
+  "aqi": 185,
+  "category": "Moderate",
+  "temperature": 31,
+  "humidity": 80,
+  "windSpeed": 10,
+  "pressure": 1010,
+  "visibility": 4,
+  "pollutants": {
+    "pm25": 92,
+    "pm10": 130,
+    "no2": 35,
+    "so2": 15,
+    "co": 1.1,
+    "o3": 24
+  },
+  "sources": {
+    "traffic": "High",
+    "construction": "High",
+    "industry": "High",
+    "wasteBurning": "Medium"
+  },
+  "forecast": {
+    "tomorrowAQI": 190,
+    "trend": "Increasing"
+  }
+}

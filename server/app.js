@@ -1,5 +1,7 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+import apiRoutes from './routes/api.routes.js';
+
 const app = express();
 
 app.use(cors());
@@ -9,7 +11,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'AirSense Server is running' });
 });
 
-// Routes placeholder
-// app.use('/api', require('./routes'));
+app.use('/api', apiRoutes);
 
-module.exports = app;
+export default app;

@@ -1,0 +1,28 @@
+{
+  "city": "Pune",
+  "aqi": 172,
+  "category": "Moderate",
+  "temperature": 31,
+  "humidity": 72,
+  "windSpeed": 8,
+  "pressure": 1012,
+  "visibility": 4,
+  "pollutants": {
+    "pm25": 84,
+    "pm10": 112,
+    "no2": 28,
+    "so2": 11,
+    "co": 0.9,
+    "o3": 19
+  },
+  "sources": {
+    "traffic": "High",
+    "construction": "Medium",
+    "industry": "Low",
+    "wasteBurning": "Low"
+  },
+  "forecast": {
+    "tomorrowAQI": 181,
+    "trend": "Increasing"
+  }
+}

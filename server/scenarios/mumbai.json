@@ -1,0 +1,28 @@
+{
+  "city": "Mumbai",
+  "aqi": 128,
+  "category": "Moderate",
+  "temperature": 29,
+  "humidity": 88,
+  "windSpeed": 15,
+  "pressure": 1008,
+  "visibility": 5,
+  "pollutants": {
+    "pm25": 46,
+    "pm10": 85,
+    "no2": 32,
+    "so2": 14,
+    "co": 1.2,
+    "o3": 25
+  },
+  "sources": {
+    "traffic": "High",
+    "construction": "High",
+    "industry": "Medium",
+    "wasteBurning": "Low"
+  },
+  "forecast": {
+    "tomorrowAQI": 120,
+    "trend": "Decreasing"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "city": "Bengaluru",
+  "aqi": 48,
+  "category": "Good",
+  "temperature": 24,
+  "humidity": 60,
+  "windSpeed": 12,
+  "pressure": 1015,
+  "visibility": 9,
+  "pollutants": {
+    "pm25": 12,
+    "pm10": 28,
+    "no2": 10,
+    "so2": 4,
+    "co": 0.3,
+    "o3": 14
+  },
+  "sources": {
+    "traffic": "Medium",
+    "construction": "Low",
+    "industry": "Low",
+    "wasteBurning": "Low"
+  },
+  "forecast": {
+    "tomorrowAQI": 52,
+    "trend": "Stable"
+  }
+}
