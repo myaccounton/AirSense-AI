@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiChartBar, HiCpuChip, HiDocumentText, HiCog6Tooth, HiXMark } from 'react-icons/hi2';
 
@@ -7,17 +7,20 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const navItems = [
-  { to: '/dashboard', icon: <HiChartBar size={20} />, label: 'Dashboard' },
-  { to: '/analysis', icon: <HiCpuChip size={20} />, label: 'Analysis' },
-  { to: '/reports', icon: <HiDocumentText size={20} />, label: 'Reports' },
-  { to: '/settings', icon: <HiCog6Tooth size={20} />, label: 'Settings' },
-];
-
 /**
- * Sidebar — Left navigation panel with animated route links
+ * Sidebar — Left navigation panel with city-parameterized links
  */
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const { city } = useParams();
+  const activeCity = city || localStorage.getItem('selectedCity') || 'Delhi';
+
+  const navItems = [
+    { to: `/dashboard/${activeCity}`, icon: <HiChartBar size={20} />, label: 'Dashboard' },
+    { to: `/analysis/${activeCity}`, icon: <HiCpuChip size={20} />, label: 'Analysis' },
+    { to: `/reports/${activeCity}`, icon: <HiDocumentText size={20} />, label: 'Reports' },
+    { to: `/settings/${activeCity}`, icon: <HiCog6Tooth size={20} />, label: 'Settings' },
+  ];
+
   return (
     <>
       {/* Mobile backdrop */}

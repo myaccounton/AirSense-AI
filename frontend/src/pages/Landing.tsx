@@ -190,10 +190,10 @@ export default function Landing() {
             transition={{ delay: 0.8 }}
             style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}
           >
-            <Link to="/dashboard" className="btn-primary" style={{ textDecoration: 'none' }}>
+            <Link to="/select-city" className="btn-primary" style={{ textDecoration: 'none' }}>
               Explore Dashboard <HiArrowRight size={16} />
             </Link>
-            <Link to="/reports" className="btn-secondary" style={{ textDecoration: 'none' }}>
+            <Link to="/select-city" className="btn-secondary" style={{ textDecoration: 'none' }}>
               View Reports
             </Link>
           </motion.div>

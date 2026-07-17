@@ -1,22 +1,57 @@
 import { motion } from 'framer-motion';
+import { useParams } from 'react-router-dom';
 import { useMockData } from '../hooks/useMockData';
 import LoadingScreen from '../components/LoadingScreen';
 import SectionTitle from '../components/SectionTitle';
 import StatusBadge from '../components/StatusBadge';
-import { getAQIColor, formatDate } from '../utils';
-import { HiDocumentArrowDown, HiShare, HiPrinter } from 'react-icons/hi2';
+import { getAQIColor, getAQICategory, formatDate } from '../utils';
+import { HiDocumentArrowDown, HiShare, HiPrinter, HiDocumentText } from 'react-icons/hi2';
 
 /**
- * Reports Page — Professional report preview with download/share actions
+ * Reports Page — Professional report preview with parameter-driven city support
  */
 export default function Reports() {
-  const { reportData, loading } = useMockData();
+  const { city } = useParams();
+  const { reportData, loading, error } = useMockData(city);
 
-  if (loading || !reportData) {
+  if (error) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '60vh',
+        color: 'var(--text-primary)',
+        padding: '24px',
+        textAlign: 'center'
+      }}>
+        <h2 style={{ color: '#ef4444', marginBottom: 12, fontWeight: 600 }}>API Error</h2>
+        <p style={{ color: 'var(--text-muted)', marginBottom: 24, maxWidth: 450 }}>{error}</p>
+        <button
+          onClick={() => window.location.reload()}
+          style={{
+            padding: '10px 20px',
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            border: 'none',
+            borderRadius: 8,
+            color: '#fff',
+            fontWeight: 600,
+            cursor: 'pointer'
+          }}
+        >
+          Retry Connection
+        </button>
+      </div>
+    );
+  }
+
+  // Only block on loading basic stats
+  if (loading) {
     return <LoadingScreen />;
   }
 
-  const { sections } = reportData;
+  const currentCityName = city || 'Delhi';
 
   return (
     <motion.div
@@ -26,266 +61,321 @@ export default function Reports() {
     >
       <SectionTitle
         title="Environmental Report"
-        subtitle="AI-generated comprehensive air quality report"
+        subtitle={`AI-generated comprehensive air quality report for ${currentCityName}`}
         badge="Auto-Generated"
       />
 
-      {/* Report Header */}
-      <motion.div
-        className="glass-card"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        style={{
-          padding: '28px',
-          marginBottom: 24,
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
+      {!reportData ? (
         <div style={{
-          position: 'absolute',
-          top: -40,
-          right: -40,
-          width: 120,
-          height: 120,
-          borderRadius: '50%',
-          background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))',
-          opacity: 0.06,
-          filter: 'blur(40px)',
-        }} />
-
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16 }}>
-          <div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: 4 }}>Report ID</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, fontFamily: 'monospace', color: 'var(--accent-cyan)', marginBottom: 12 }}>
-              {reportData.reportId}
-            </div>
-            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>City</div>
-                <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.city}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Region</div>
-                <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.region}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Period</div>
-                <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.period}</div>
-              </div>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Generated</div>
-                <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{formatDate(reportData.generatedAt)}</div>
-              </div>
-            </div>
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '80px 24px',
+          background: 'rgba(255, 255, 255, 0.02)',
+          border: '1px solid rgba(255, 255, 255, 0.06)',
+          borderRadius: 20,
+          textAlign: 'center',
+          backdropFilter: 'blur(12px)'
+        }}>
+          <div style={{
+            display: 'inline-flex',
+            padding: 16,
+            borderRadius: 16,
+            background: 'rgba(239, 68, 68, 0.1)',
+            border: '1px solid rgba(239, 68, 68, 0.2)',
+            color: '#ef4444',
+            marginBottom: 20
+          }}>
+            <HiDocumentText size={32} />
           </div>
-
-          {/* Action Buttons */}
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button
-              className="btn-primary"
-              style={{ fontSize: '0.8rem', padding: '8px 16px' }}
-              onClick={() => alert('PDF download would be triggered here')}
-              id="download-pdf-btn"
-            >
-              <HiDocumentArrowDown size={16} /> Download PDF
-            </button>
-            <button
-              className="btn-secondary"
-              style={{ fontSize: '0.8rem', padding: '8px 16px' }}
-              onClick={() => alert('Share dialog would open here')}
-              id="share-report-btn"
-            >
-              <HiShare size={16} /> Share
-            </button>
-            <button
-              className="btn-secondary"
-              style={{ fontSize: '0.8rem', padding: '8px 16px' }}
-              onClick={() => window.print()}
-              id="print-report-btn"
-            >
-              <HiPrinter size={16} /> Print
-            </button>
-          </div>
+          <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 8, color: '#fff' }}>
+            Generate AI Analysis First
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: 450 }}>
+            Please navigate to the Dashboard and click the <strong>Analyze with AI</strong> button to compile the environmental intelligence report.
+          </p>
         </div>
-      </motion.div>
-
-      {/* Report Sections */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-        {/* Current AQI Section */}
-        <motion.div
-          className="glass-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          style={{ padding: '28px' }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+      ) : (
+        <>
+          {/* Report Header */}
+          <motion.div
+            className="glass-card"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            style={{
+              padding: '28px',
+              marginBottom: 24,
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
             <div style={{
-              width: 8,
-              height: 8,
+              position: 'absolute',
+              top: -40,
+              right: -40,
+              width: 120,
+              height: 120,
               borderRadius: '50%',
-              background: getAQIColor(sections.currentAQI.category),
-              boxShadow: `0 0 8px ${getAQIColor(sections.currentAQI.category)}`,
+              background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))',
+              opacity: 0.06,
+              filter: 'blur(40px)',
             }} />
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{sections.currentAQI.title}</h3>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 16, flexWrap: 'wrap' }}>
-            <div style={{
-              fontSize: '3rem',
-              fontWeight: 800,
-              color: getAQIColor(sections.currentAQI.category),
-              lineHeight: 1,
-            }}>
-              {sections.currentAQI.aqi}
-            </div>
-            <StatusBadge label={sections.currentAQI.category} color={getAQIColor(sections.currentAQI.category)} />
-          </div>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-            {sections.currentAQI.description}
-          </p>
-        </motion.div>
 
-        {/* Forecast Section */}
-        <motion.div
-          className="glass-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          style={{ padding: '28px' }}
-        >
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 16 }}>{sections.forecast.title}</h3>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 16 }}>
-            {sections.forecast.description}
-          </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <div style={{
-              padding: '8px 16px',
-              borderRadius: 10,
-              background: 'rgba(249,115,22,0.1)',
-              border: '1px solid rgba(249,115,22,0.2)',
-            }}>
-              <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Peak AQI</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#f97316' }}>{sections.forecast.peakAQI}</div>
-            </div>
-            <div style={{
-              padding: '8px 16px',
-              borderRadius: 10,
-              background: 'rgba(239,68,68,0.1)',
-              border: '1px solid rgba(239,68,68,0.2)',
-            }}>
-              <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Peak Time</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ef4444' }}>{sections.forecast.peakTime}</div>
-            </div>
-          </div>
-        </motion.div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16 }}>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: 4 }}>Report ID</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: 600, fontFamily: 'monospace', color: 'var(--accent-cyan)', marginBottom: 12 }}>
+                  {reportData.reportId}
+                </div>
+                <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+                  <div>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>City</div>
+                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.city}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Region</div>
+                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.region}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Period</div>
+                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{reportData.period}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Generated</div>
+                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{formatDate(reportData.generatedAt)}</div>
+                  </div>
+                </div>
+              </div>
 
-        {/* Analysis Section */}
-        <motion.div
-          className="glass-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          style={{ padding: '28px' }}
-        >
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 16 }}>{sections.analysis.title}</h3>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 16 }}>
-            {sections.analysis.description}
-          </p>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {sections.analysis.topSources.map((source) => (
-              <span
-                key={source}
-                style={{
-                  padding: '6px 14px',
-                  borderRadius: 8,
-                  background: 'rgba(139,92,246,0.1)',
-                  border: '1px solid rgba(139,92,246,0.2)',
-                  fontSize: '0.8rem',
-                  color: '#8b5cf6',
-                  fontWeight: 500,
-                }}
-              >
-                {source}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  className="btn-primary"
+                  style={{ fontSize: '0.8rem', padding: '8px 16px' }}
+                  onClick={() => alert('PDF download would be triggered here')}
+                  id="download-pdf-btn"
+                >
+                  <HiDocumentArrowDown size={16} /> Download PDF
+                </button>
+                <button
+                  className="btn-secondary"
+                  style={{ fontSize: '0.8rem', padding: '8px 16px' }}
+                  onClick={() => alert('Share dialog would open here')}
+                  id="share-report-btn"
+                >
+                  <HiShare size={16} /> Share
+                </button>
+                <button
+                  className="btn-secondary"
+                  style={{ fontSize: '0.8rem', padding: '8px 16px' }}
+                  onClick={() => window.print()}
+                  id="print-report-btn"
+                >
+                  <HiPrinter size={16} /> Print
+                </button>
+              </div>
+            </div>
+          </motion.div>
 
-        {/* Municipal Actions */}
-        <motion.div
-          className="glass-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          style={{ padding: '28px' }}
-        >
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 16 }}>{sections.municipal.title}</h3>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 16 }}>
-            {sections.municipal.description}
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {sections.municipal.actions.map((action, i) => (
-              <div key={i} style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 12,
-                padding: '12px 16px',
-                borderRadius: 10,
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.05)',
-              }}>
-                <span style={{
-                  width: 24,
+          {/* Report Sections */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {/* Current AQI Section */}
+            <motion.div
+              className="glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              style={{ padding: '28px' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{
+                  width: 8,
                   height: 24,
-                  borderRadius: 7,
-                  background: 'rgba(59,130,246,0.15)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '0.7rem',
-                  fontWeight: 700,
-                  color: '#3b82f6',
-                  flexShrink: 0,
-                }}>
-                  {i + 1}
-                </span>
-                <span style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>{action}</span>
+                  borderRadius: 4,
+                  background: 'var(--accent-cyan)'
+                }} />
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                  {reportData.sections.currentAQI.title}
+                </h3>
               </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Health Advisory */}
-        <motion.div
-          className="glass-card"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          style={{ padding: '28px' }}
-        >
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 16 }}>{sections.health.title}</h3>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 16 }}>
-            {sections.health.description}
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {sections.health.advisories.map((advisory, i) => (
-              <div key={i} style={{
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 20 }}>
+                {reportData.sections.currentAQI.description}
+              </p>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 10,
-                padding: '10px 14px',
-                borderRadius: 10,
-                background: 'rgba(239,68,68,0.05)',
-                border: '1px solid rgba(239,68,68,0.1)',
+                gap: 16,
+                padding: '16px',
+                background: 'rgba(255,255,255,0.02)',
+                borderRadius: 12,
+                border: '1px solid rgba(255,255,255,0.04)',
+                width: 'fit-content'
               }}>
-                <span style={{ fontSize: '0.8rem', color: '#ef4444' }}>⚕</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)' }}>{advisory}</span>
+                <div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Status Index</div>
+                  <div style={{ fontSize: '1.4rem', fontWeight: 800, color: getAQIColor(getAQICategory(reportData.sections.currentAQI.aqi)) }}>
+                    {reportData.sections.currentAQI.aqi}
+                  </div>
+                </div>
+                <div style={{ borderLeft: '1px solid rgba(255,255,255,0.08)', paddingLeft: 16 }}>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Trend Assessment</div>
+                  <StatusBadge 
+                    label={reportData.sections.currentAQI.category} 
+                    color={getAQIColor(reportData.sections.currentAQI.category)} 
+                  />
+                </div>
               </div>
-            ))}
+            </motion.div>
+
+            {/* Short-term Forecast */}
+            <motion.div
+              className="glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              style={{ padding: '28px' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{
+                  width: 8,
+                  height: 24,
+                  borderRadius: 4,
+                  background: 'var(--accent-blue)'
+                }} />
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                  {reportData.sections.forecast.title}
+                </h3>
+              </div>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 20 }}>
+                {reportData.sections.forecast.description}
+              </p>
+              <div style={{ display: 'flex', gap: 12 }}>
+                <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.02)', borderRadius: 10 }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Expected Peak AQI</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 700, color: getAQIColor(getAQICategory(reportData.sections.forecast.peakAQI)) }}>
+                    {reportData.sections.forecast.peakAQI}
+                  </div>
+                </div>
+                <div style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.02)', borderRadius: 10 }}>
+                  <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Peak Occurrence</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff' }}>
+                    {reportData.sections.forecast.peakTime}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Pollution Source Analysis */}
+            <motion.div
+              className="glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              style={{ padding: '28px' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{
+                  width: 8,
+                  height: 24,
+                  borderRadius: 4,
+                  background: 'var(--accent-purple)'
+                }} />
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                  {reportData.sections.analysis.title}
+                </h3>
+              </div>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 20 }}>
+                {reportData.sections.analysis.description}
+              </p>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: 10 }}>Key Driver Sources</div>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {reportData.sections.analysis.topSources.map((source: string) => (
+                    <span
+                      key={source}
+                      style={{
+                        padding: '6px 12px',
+                        background: 'rgba(255,255,255,0.04)',
+                        border: '1px solid rgba(255,255,255,0.06)',
+                        borderRadius: 8,
+                        fontSize: '0.8rem',
+                        color: 'var(--text-primary)'
+                      }}
+                    >
+                      {source}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Municipal Action Plan */}
+            <motion.div
+              className="glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              style={{ padding: '28px' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{
+                  width: 8,
+                  height: 24,
+                  borderRadius: 4,
+                  background: 'var(--accent-orange)'
+                }} />
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                  {reportData.sections.municipal.title}
+                </h3>
+              </div>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 20 }}>
+                {reportData.sections.municipal.description}
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {reportData.sections.municipal.actions.map((act: string, idx: number) => (
+                  <div key={idx} style={{ display: 'flex', gap: 12, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    <span style={{ color: 'var(--accent-orange)', fontWeight: 600 }}>{idx + 1}.</span>
+                    <span>{act}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Citizen Advisory */}
+            <motion.div
+              className="glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              style={{ padding: '28px' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                <div style={{
+                  width: 8,
+                  height: 24,
+                  borderRadius: 4,
+                  background: 'var(--accent-red)'
+                }} />
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                  {reportData.sections.health.title}
+                </h3>
+              </div>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 20 }}>
+                {reportData.sections.health.description}
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {reportData.sections.health.advisories.map((adv: string, idx: number) => (
+                  <div key={idx} style={{ display: 'flex', gap: 12, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    <span style={{ color: 'var(--accent-red)', fontWeight: 600 }}>•</span>
+                    <span>{adv}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
+        </>
+      )}
     </motion.div>
   );
 }

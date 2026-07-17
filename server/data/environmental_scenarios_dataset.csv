@@ -1,0 +1,281 @@
+Date,City,State,Scenario,Latitude,Longitude,AQI,PM2.5,PM10,NO2,CO,Temperature,Humidity,WindSpeed,Traffic,ConstructionActivity,IndustrialActivity,RiskZone,Hotspot
+01-07-2026,Delhi,Delhi,Normal,28.6139,77.209,315,177,293,82,2.38,35,58,10,High,High,High,Very Poor,TRUE
+02-07-2026,Delhi,Delhi,Normal,28.6139,77.209,318,178,295,82,2.4,35,58,10,High,High,High,Very Poor,TRUE
+03-07-2026,Delhi,Delhi,Normal,28.6139,77.209,321,179,297,82,2.42,35,58,10,High,High,High,Very Poor,TRUE
+04-07-2026,Delhi,Delhi,Normal,28.6139,77.209,324,181,299,83,2.43,35,58,10,High,High,High,Very Poor,TRUE
+05-07-2026,Delhi,Delhi,Normal,28.6139,77.209,315,177,293,82,2.38,35,58,10,High,High,High,Very Poor,TRUE
+06-07-2026,Delhi,Delhi,Normal,28.6139,77.209,318,178,295,82,2.4,35,58,10,High,High,High,Very Poor,TRUE
+07-07-2026,Delhi,Delhi,Normal,28.6139,77.209,321,179,297,82,2.42,35,58,10,High,High,High,Very Poor,TRUE
+01-07-2026,Delhi,Delhi,Festival,28.6139,77.209,385,214,348,94,2.73,36,55,8,High,High,High,Very Poor,TRUE
+02-07-2026,Delhi,Delhi,Festival,28.6139,77.209,388,216,351,94,2.75,36,55,8,High,High,High,Very Poor,TRUE
+03-07-2026,Delhi,Delhi,Festival,28.6139,77.209,391,218,353,95,2.76,36,55,8,High,High,High,Very Poor,TRUE
+04-07-2026,Delhi,Delhi,Festival,28.6139,77.209,394,219,355,95,2.78,36,55,8,High,High,High,Very Poor,TRUE
+05-07-2026,Delhi,Delhi,Festival,28.6139,77.209,385,214,348,94,2.73,36,55,8,High,High,High,Very Poor,TRUE
+06-07-2026,Delhi,Delhi,Festival,28.6139,77.209,388,216,351,94,2.75,36,55,8,High,High,High,Very Poor,TRUE
+07-07-2026,Delhi,Delhi,Festival,28.6139,77.209,391,218,353,95,2.76,36,55,8,High,High,High,Very Poor,TRUE
+01-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,255,144,245,71,2.08,34,66,14,Low,High,High,Poor,TRUE
+02-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,258,145,247,72,2.1,34,66,14,Low,High,High,Poor,TRUE
+03-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,261,147,250,72,2.11,34,66,14,Low,High,High,Poor,TRUE
+04-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,264,149,252,73,2.13,34,66,14,Low,High,High,Poor,TRUE
+05-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,255,144,245,71,2.08,34,66,14,Low,High,High,Poor,TRUE
+06-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,258,145,247,72,2.1,34,66,14,Low,High,High,Poor,TRUE
+07-07-2026,Delhi,Delhi,Rainy,28.6139,77.209,261,147,250,72,2.11,34,66,14,Low,High,High,Poor,TRUE
+01-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,355,198,324,88,2.58,35,58,10,High,High,High,Very Poor,TRUE
+02-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,358,200,327,89,2.6,35,58,10,High,High,High,Very Poor,TRUE
+03-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,361,201,329,89,2.61,35,58,10,High,High,High,Very Poor,TRUE
+04-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,364,203,331,90,2.63,35,58,10,High,High,High,Very Poor,TRUE
+05-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,355,198,324,88,2.58,35,58,10,High,High,High,Very Poor,TRUE
+06-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,358,200,327,89,2.6,35,58,10,High,High,High,Very Poor,TRUE
+07-07-2026,Delhi,Delhi,Industrial Peak,28.6139,77.209,361,201,329,89,2.61,35,58,10,High,High,High,Very Poor,TRUE
+01-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,159,67,124,42,1.09,31,78,18,High,Medium,Medium,Moderate,FALSE
+02-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,162,68,126,42,1.1,31,78,18,High,Medium,Medium,Moderate,FALSE
+03-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,165,69,128,42,1.11,31,78,18,High,Medium,Medium,Moderate,FALSE
+04-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,168,71,130,43,1.13,31,78,18,High,Medium,Medium,Moderate,FALSE
+05-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,159,67,124,42,1.09,31,78,18,High,Medium,Medium,Moderate,FALSE
+06-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,162,68,126,42,1.1,31,78,18,High,Medium,Medium,Moderate,FALSE
+07-07-2026,Mumbai,Maharashtra,Normal,19.076,72.8777,165,69,128,42,1.11,31,78,18,High,Medium,Medium,Moderate,FALSE
+01-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,229,104,179,54,1.44,32,75,16,High,Medium,Medium,Poor,TRUE
+02-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,232,106,182,54,1.45,32,75,16,High,Medium,Medium,Poor,TRUE
+03-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,235,108,184,55,1.47,32,75,16,High,Medium,Medium,Poor,TRUE
+04-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,238,109,186,55,1.48,32,75,16,High,Medium,Medium,Poor,TRUE
+05-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,229,104,179,54,1.44,32,75,16,High,Medium,Medium,Poor,TRUE
+06-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,232,106,182,54,1.45,32,75,16,High,Medium,Medium,Poor,TRUE
+07-07-2026,Mumbai,Maharashtra,Festival,19.076,72.8777,235,108,184,55,1.47,32,75,16,High,Medium,Medium,Poor,TRUE
+01-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,99,34,76,31,0.79,30,86,22,Low,Medium,Medium,Satisfactory,FALSE
+02-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,102,35,78,32,0.8,30,86,22,Low,Medium,Medium,Moderate,FALSE
+03-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,105,37,81,32,0.82,30,86,22,Low,Medium,Medium,Moderate,FALSE
+04-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,108,39,83,33,0.83,30,86,22,Low,Medium,Medium,Moderate,FALSE
+05-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,99,34,76,31,0.79,30,86,22,Low,Medium,Medium,Satisfactory,FALSE
+06-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,102,35,78,32,0.8,30,86,22,Low,Medium,Medium,Moderate,FALSE
+07-07-2026,Mumbai,Maharashtra,Rainy,19.076,72.8777,105,37,81,32,0.82,30,86,22,Low,Medium,Medium,Moderate,FALSE
+01-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,199,88,155,48,1.29,31,78,18,High,Medium,Medium,Moderate,FALSE
+02-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,202,90,158,49,1.3,31,78,18,High,Medium,Medium,Poor,TRUE
+03-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,205,91,160,49,1.32,31,78,18,High,Medium,Medium,Poor,TRUE
+04-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,208,93,162,50,1.33,31,78,18,High,Medium,Medium,Poor,TRUE
+05-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,199,88,155,48,1.29,31,78,18,High,Medium,Medium,Moderate,FALSE
+06-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,202,90,158,49,1.3,31,78,18,High,Medium,Medium,Poor,TRUE
+07-07-2026,Mumbai,Maharashtra,Industrial Peak,19.076,72.8777,205,91,160,49,1.32,31,78,18,High,Medium,Medium,Poor,TRUE
+01-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,123,53,102,34,0.79,29,60,15,Medium,Medium,Low,Moderate,FALSE
+02-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,126,54,104,34,0.8,29,60,15,Medium,Medium,Low,Moderate,FALSE
+03-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,129,55,106,34,0.82,29,60,15,Medium,Medium,Low,Moderate,FALSE
+04-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,132,57,108,35,0.83,29,60,15,Medium,Medium,Low,Moderate,FALSE
+05-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,123,53,102,34,0.79,29,60,15,Medium,Medium,Low,Moderate,FALSE
+06-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,126,54,104,34,0.8,29,60,15,Medium,Medium,Low,Moderate,FALSE
+07-07-2026,Pune,Maharashtra,Normal,18.5204,73.8567,129,55,106,34,0.82,29,60,15,Medium,Medium,Low,Moderate,FALSE
+01-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,193,90,157,46,1.14,30,57,13,High,Medium,Low,Moderate,FALSE
+02-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,196,92,160,46,1.15,30,57,13,High,Medium,Low,Moderate,FALSE
+03-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,199,94,162,47,1.17,30,57,13,High,Medium,Low,Moderate,FALSE
+04-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,202,95,164,47,1.18,30,57,13,High,Medium,Low,Poor,TRUE
+05-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,193,90,157,46,1.14,30,57,13,High,Medium,Low,Moderate,FALSE
+06-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,196,92,160,46,1.15,30,57,13,High,Medium,Low,Moderate,FALSE
+07-07-2026,Pune,Maharashtra,Festival,18.5204,73.8567,199,94,162,47,1.17,30,57,13,High,Medium,Low,Moderate,FALSE
+01-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,63,20,54,23,0.49,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+02-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,66,21,56,24,0.5,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+03-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,69,23,59,24,0.52,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+04-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,72,25,61,25,0.53,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+05-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,63,20,54,23,0.49,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+06-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,66,21,56,24,0.5,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+07-07-2026,Pune,Maharashtra,Rainy,18.5204,73.8567,69,23,59,24,0.52,28,68,19,Low,Medium,Low,Satisfactory,FALSE
+01-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,163,74,133,40,0.99,29,60,15,High,Medium,Low,Moderate,FALSE
+02-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,166,76,136,41,1,29,60,15,High,Medium,Low,Moderate,FALSE
+03-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,169,77,138,41,1.02,29,60,15,High,Medium,Low,Moderate,FALSE
+04-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,172,79,140,42,1.03,29,60,15,High,Medium,Low,Moderate,FALSE
+05-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,163,74,133,40,0.99,29,60,15,High,Medium,Low,Moderate,FALSE
+06-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,166,76,136,41,1,29,60,15,High,Medium,Low,Moderate,FALSE
+07-07-2026,Pune,Maharashtra,Industrial Peak,18.5204,73.8567,169,77,138,41,1.02,29,60,15,High,Medium,Low,Moderate,FALSE
+01-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,91,34,70,24,0.68,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+02-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,94,35,72,24,0.7,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+03-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,97,36,74,24,0.71,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+04-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,100,38,76,25,0.73,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+05-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,91,34,70,24,0.68,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+06-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,94,35,72,24,0.7,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+07-07-2026,Bengaluru,Karnataka,Normal,12.9716,77.5946,97,36,74,24,0.71,27,65,14,Medium,Medium,Low,Satisfactory,FALSE
+01-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,161,71,125,36,1.03,28,62,12,High,Medium,Low,Moderate,FALSE
+02-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,164,73,128,36,1.05,28,62,12,High,Medium,Low,Moderate,FALSE
+03-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,167,75,130,37,1.06,28,62,12,High,Medium,Low,Moderate,FALSE
+04-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,170,76,132,37,1.08,28,62,12,High,Medium,Low,Moderate,FALSE
+05-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,161,71,125,36,1.03,28,62,12,High,Medium,Low,Moderate,FALSE
+06-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,164,73,128,36,1.05,28,62,12,High,Medium,Low,Moderate,FALSE
+07-07-2026,Bengaluru,Karnataka,Festival,12.9716,77.5946,167,75,130,37,1.06,28,62,12,High,Medium,Low,Moderate,FALSE
+01-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,22,13,0.38,26,73,18,Low,Medium,Low,Good,FALSE
+02-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,24,14,0.4,26,73,18,Low,Medium,Low,Good,FALSE
+03-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,27,14,0.41,26,73,18,Low,Medium,Low,Good,FALSE
+04-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,6,29,15,0.43,26,73,18,Low,Medium,Low,Good,FALSE
+05-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,22,13,0.38,26,73,18,Low,Medium,Low,Good,FALSE
+06-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,24,14,0.4,26,73,18,Low,Medium,Low,Good,FALSE
+07-07-2026,Bengaluru,Karnataka,Rainy,12.9716,77.5946,40,5,27,14,0.41,26,73,18,Low,Medium,Low,Good,FALSE
+01-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,131,55,101,30,0.89,27,65,14,High,Medium,Low,Moderate,FALSE
+02-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,134,57,104,31,0.9,27,65,14,High,Medium,Low,Moderate,FALSE
+03-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,137,58,106,31,0.91,27,65,14,High,Medium,Low,Moderate,FALSE
+04-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,140,60,108,32,0.93,27,65,14,High,Medium,Low,Moderate,FALSE
+05-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,131,55,101,30,0.89,27,65,14,High,Medium,Low,Moderate,FALSE
+06-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,134,57,104,31,0.9,27,65,14,High,Medium,Low,Moderate,FALSE
+07-07-2026,Bengaluru,Karnataka,Industrial Peak,12.9716,77.5946,137,58,106,31,0.91,27,65,14,High,Medium,Low,Moderate,FALSE
+01-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,115,47,86,32,0.89,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+02-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,118,48,88,32,0.9,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+03-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,121,49,90,32,0.92,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+04-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,124,51,92,33,0.93,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+05-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,115,47,86,32,0.89,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+06-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,118,48,88,32,0.9,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+07-07-2026,Chennai,Tamil Nadu,Normal,13.0827,80.2707,121,49,90,32,0.92,33,72,20,Medium,Medium,Medium,Moderate,FALSE
+01-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,185,84,141,44,1.24,34,69,18,High,Medium,Medium,Moderate,FALSE
+02-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,188,86,144,44,1.25,34,69,18,High,Medium,Medium,Moderate,FALSE
+03-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,191,88,146,45,1.27,34,69,18,High,Medium,Medium,Moderate,FALSE
+04-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,194,89,148,45,1.28,34,69,18,High,Medium,Medium,Moderate,FALSE
+05-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,185,84,141,44,1.24,34,69,18,High,Medium,Medium,Moderate,FALSE
+06-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,188,86,144,44,1.25,34,69,18,High,Medium,Medium,Moderate,FALSE
+07-07-2026,Chennai,Tamil Nadu,Festival,13.0827,80.2707,191,88,146,45,1.27,34,69,18,High,Medium,Medium,Moderate,FALSE
+01-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,55,14,38,21,0.58,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+02-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,58,15,40,22,0.6,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+03-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,61,17,43,22,0.61,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+04-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,64,19,45,23,0.63,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+05-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,55,14,38,21,0.58,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+06-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,58,15,40,22,0.6,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+07-07-2026,Chennai,Tamil Nadu,Rainy,13.0827,80.2707,61,17,43,22,0.61,32,80,24,Low,Medium,Medium,Satisfactory,FALSE
+01-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,155,68,117,38,1.08,33,72,20,High,Medium,Medium,Moderate,FALSE
+02-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,158,70,120,39,1.1,33,72,20,High,Medium,Medium,Moderate,FALSE
+03-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,161,71,122,39,1.11,33,72,20,High,Medium,Medium,Moderate,FALSE
+04-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,164,73,124,40,1.13,33,72,20,High,Medium,Medium,Moderate,FALSE
+05-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,155,68,117,38,1.08,33,72,20,High,Medium,Medium,Moderate,FALSE
+06-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,158,70,120,39,1.1,33,72,20,High,Medium,Medium,Moderate,FALSE
+07-07-2026,Chennai,Tamil Nadu,Industrial Peak,13.0827,80.2707,161,71,122,39,1.11,33,72,20,High,Medium,Medium,Moderate,FALSE
+01-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,139,59,116,39,0.98,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+02-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,142,60,118,39,1,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+03-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,145,61,120,39,1.01,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+04-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,148,63,122,40,1.03,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+05-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,139,59,116,39,0.98,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+06-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,142,60,118,39,1,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+07-07-2026,Hyderabad,Telangana,Normal,17.385,78.4867,145,61,120,39,1.01,34,55,16,Medium,Medium,Medium,Moderate,FALSE
+01-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,209,96,171,51,1.33,35,52,14,High,Medium,Medium,Poor,TRUE
+02-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,212,98,174,51,1.35,35,52,14,High,Medium,Medium,Poor,TRUE
+03-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,215,100,176,52,1.36,35,52,14,High,Medium,Medium,Poor,TRUE
+04-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,218,101,178,52,1.38,35,52,14,High,Medium,Medium,Poor,TRUE
+05-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,209,96,171,51,1.33,35,52,14,High,Medium,Medium,Poor,TRUE
+06-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,212,98,174,51,1.35,35,52,14,High,Medium,Medium,Poor,TRUE
+07-07-2026,Hyderabad,Telangana,Festival,17.385,78.4867,215,100,176,52,1.36,35,52,14,High,Medium,Medium,Poor,TRUE
+01-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,79,26,68,28,0.69,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+02-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,82,27,70,29,0.7,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+03-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,85,29,73,29,0.71,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+04-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,88,31,75,30,0.73,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+05-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,79,26,68,28,0.69,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+06-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,82,27,70,29,0.7,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+07-07-2026,Hyderabad,Telangana,Rainy,17.385,78.4867,85,29,73,29,0.71,33,63,20,Low,Medium,Medium,Satisfactory,FALSE
+01-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,179,80,147,45,1.19,34,55,16,High,Medium,Medium,Moderate,FALSE
+02-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,182,82,150,46,1.2,34,55,16,High,Medium,Medium,Moderate,FALSE
+03-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,185,83,152,46,1.22,34,55,16,High,Medium,Medium,Moderate,FALSE
+04-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,188,85,154,47,1.23,34,55,16,High,Medium,Medium,Moderate,FALSE
+05-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,179,80,147,45,1.19,34,55,16,High,Medium,Medium,Moderate,FALSE
+06-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,182,82,150,46,1.2,34,55,16,High,Medium,Medium,Moderate,FALSE
+07-07-2026,Hyderabad,Telangana,Industrial Peak,17.385,78.4867,185,83,152,46,1.22,34,55,16,High,Medium,Medium,Moderate,FALSE
+01-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,211,101,174,58,1.59,32,74,12,High,High,High,Poor,TRUE
+02-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,214,102,176,58,1.6,32,74,12,High,High,High,Poor,TRUE
+03-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,217,103,178,58,1.61,32,74,12,High,High,High,Poor,TRUE
+04-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,220,105,180,59,1.63,32,74,12,High,High,High,Poor,TRUE
+05-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,211,101,174,58,1.59,32,74,12,High,High,High,Poor,TRUE
+06-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,214,102,176,58,1.6,32,74,12,High,High,High,Poor,TRUE
+07-07-2026,Kolkata,West Bengal,Normal,22.5726,88.3639,217,103,178,58,1.61,32,74,12,High,High,High,Poor,TRUE
+01-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,281,138,229,70,1.94,33,71,10,High,High,High,Poor,TRUE
+02-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,284,140,232,70,1.95,33,71,10,High,High,High,Poor,TRUE
+03-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,287,142,234,71,1.97,33,71,10,High,High,High,Poor,TRUE
+04-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,290,143,236,71,1.98,33,71,10,High,High,High,Poor,TRUE
+05-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,281,138,229,70,1.94,33,71,10,High,High,High,Poor,TRUE
+06-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,284,140,232,70,1.95,33,71,10,High,High,High,Poor,TRUE
+07-07-2026,Kolkata,West Bengal,Festival,22.5726,88.3639,287,142,234,71,1.97,33,71,10,High,High,High,Poor,TRUE
+01-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,151,68,126,47,1.29,31,82,16,Low,High,High,Moderate,FALSE
+02-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,154,69,128,48,1.3,31,82,16,Low,High,High,Moderate,FALSE
+03-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,157,71,131,48,1.31,31,82,16,Low,High,High,Moderate,FALSE
+04-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,160,73,133,49,1.33,31,82,16,Low,High,High,Moderate,FALSE
+05-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,151,68,126,47,1.29,31,82,16,Low,High,High,Moderate,FALSE
+06-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,154,69,128,48,1.3,31,82,16,Low,High,High,Moderate,FALSE
+07-07-2026,Kolkata,West Bengal,Rainy,22.5726,88.3639,157,71,131,48,1.31,31,82,16,Low,High,High,Moderate,FALSE
+01-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,251,122,205,64,1.79,32,74,12,High,High,High,Poor,TRUE
+02-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,254,124,208,65,1.8,32,74,12,High,High,High,Poor,TRUE
+03-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,257,125,210,65,1.82,32,74,12,High,High,High,Poor,TRUE
+04-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,260,127,212,66,1.83,32,74,12,High,High,High,Poor,TRUE
+05-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,251,122,205,64,1.79,32,74,12,High,High,High,Poor,TRUE
+06-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,254,124,208,65,1.8,32,74,12,High,High,High,Poor,TRUE
+07-07-2026,Kolkata,West Bengal,Industrial Peak,22.5726,88.3639,257,125,210,65,1.82,32,74,12,High,High,High,Poor,TRUE
+01-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,189,85,160,49,1.39,38,42,13,High,High,Medium,Moderate,FALSE
+02-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,192,86,162,49,1.4,38,42,13,High,High,Medium,Moderate,FALSE
+03-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,195,87,164,49,1.41,38,42,13,High,High,Medium,Moderate,FALSE
+04-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,198,89,166,50,1.43,38,42,13,High,High,Medium,Moderate,FALSE
+05-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,189,85,160,49,1.39,38,42,13,High,High,Medium,Moderate,FALSE
+06-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,192,86,162,49,1.4,38,42,13,High,High,Medium,Moderate,FALSE
+07-07-2026,Ahmedabad,Gujarat,Normal,23.0225,72.5714,195,87,164,49,1.41,38,42,13,High,High,Medium,Moderate,FALSE
+01-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,259,122,215,61,1.73,39,39,11,High,High,Medium,Poor,TRUE
+02-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,262,124,218,61,1.75,39,39,11,High,High,Medium,Poor,TRUE
+03-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,265,126,220,62,1.76,39,39,11,High,High,Medium,Poor,TRUE
+04-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,268,127,222,62,1.78,39,39,11,High,High,Medium,Poor,TRUE
+05-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,259,122,215,61,1.73,39,39,11,High,High,Medium,Poor,TRUE
+06-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,262,124,218,61,1.75,39,39,11,High,High,Medium,Poor,TRUE
+07-07-2026,Ahmedabad,Gujarat,Festival,23.0225,72.5714,265,126,220,62,1.76,39,39,11,High,High,Medium,Poor,TRUE
+01-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,129,52,112,38,1.08,37,50,17,Low,High,Medium,Moderate,FALSE
+02-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,132,53,114,39,1.1,37,50,17,Low,High,Medium,Moderate,FALSE
+03-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,135,55,117,39,1.11,37,50,17,Low,High,Medium,Moderate,FALSE
+04-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,138,57,119,40,1.13,37,50,17,Low,High,Medium,Moderate,FALSE
+05-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,129,52,112,38,1.08,37,50,17,Low,High,Medium,Moderate,FALSE
+06-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,132,53,114,39,1.1,37,50,17,Low,High,Medium,Moderate,FALSE
+07-07-2026,Ahmedabad,Gujarat,Rainy,23.0225,72.5714,135,55,117,39,1.11,37,50,17,Low,High,Medium,Moderate,FALSE
+01-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,229,106,191,55,1.58,38,42,13,High,High,Medium,Poor,TRUE
+02-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,232,108,194,56,1.6,38,42,13,High,High,Medium,Poor,TRUE
+03-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,235,109,196,56,1.61,38,42,13,High,High,Medium,Poor,TRUE
+04-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,238,111,198,57,1.63,38,42,13,High,High,Medium,Poor,TRUE
+05-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,229,106,191,55,1.58,38,42,13,High,High,Medium,Poor,TRUE
+06-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,232,108,194,56,1.6,38,42,13,High,High,Medium,Poor,TRUE
+07-07-2026,Ahmedabad,Gujarat,Industrial Peak,23.0225,72.5714,235,109,196,56,1.61,38,42,13,High,High,Medium,Poor,TRUE
+01-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,168,75,142,44,1.19,37,40,17,Medium,High,Medium,Moderate,FALSE
+02-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,171,76,144,44,1.2,37,40,17,Medium,High,Medium,Moderate,FALSE
+03-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,174,77,146,44,1.21,37,40,17,Medium,High,Medium,Moderate,FALSE
+04-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,177,79,148,45,1.23,37,40,17,Medium,High,Medium,Moderate,FALSE
+05-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,168,75,142,44,1.19,37,40,17,Medium,High,Medium,Moderate,FALSE
+06-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,171,76,144,44,1.2,37,40,17,Medium,High,Medium,Moderate,FALSE
+07-07-2026,Jaipur,Rajasthan,Normal,26.9124,75.7873,174,77,146,44,1.21,37,40,17,Medium,High,Medium,Moderate,FALSE
+01-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,238,112,197,56,1.53,38,37,15,High,High,Medium,Poor,TRUE
+02-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,241,114,200,56,1.55,38,37,15,High,High,Medium,Poor,TRUE
+03-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,244,116,202,57,1.56,38,37,15,High,High,Medium,Poor,TRUE
+04-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,247,117,204,57,1.58,38,37,15,High,High,Medium,Poor,TRUE
+05-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,238,112,197,56,1.53,38,37,15,High,High,Medium,Poor,TRUE
+06-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,241,114,200,56,1.55,38,37,15,High,High,Medium,Poor,TRUE
+07-07-2026,Jaipur,Rajasthan,Festival,26.9124,75.7873,244,116,202,57,1.56,38,37,15,High,High,Medium,Poor,TRUE
+01-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,108,42,94,33,0.89,36,48,21,Low,High,Medium,Moderate,FALSE
+02-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,111,43,96,34,0.9,36,48,21,Low,High,Medium,Moderate,FALSE
+03-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,114,45,99,34,0.91,36,48,21,Low,High,Medium,Moderate,FALSE
+04-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,117,47,101,35,0.93,36,48,21,Low,High,Medium,Moderate,FALSE
+05-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,108,42,94,33,0.89,36,48,21,Low,High,Medium,Moderate,FALSE
+06-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,111,43,96,34,0.9,36,48,21,Low,High,Medium,Moderate,FALSE
+07-07-2026,Jaipur,Rajasthan,Rainy,26.9124,75.7873,114,45,99,34,0.91,36,48,21,Low,High,Medium,Moderate,FALSE
+01-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,208,96,173,50,1.39,37,40,17,High,High,Medium,Poor,TRUE
+02-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,211,98,176,51,1.4,37,40,17,High,High,Medium,Poor,TRUE
+03-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,214,99,178,51,1.42,37,40,17,High,High,Medium,Poor,TRUE
+04-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,217,101,180,52,1.43,37,40,17,High,High,Medium,Poor,TRUE
+05-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,208,96,173,50,1.39,37,40,17,High,High,Medium,Poor,TRUE
+06-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,211,98,176,51,1.4,37,40,17,High,High,Medium,Poor,TRUE
+07-07-2026,Jaipur,Rajasthan,Industrial Peak,26.9124,75.7873,214,99,178,51,1.42,37,40,17,High,High,Medium,Poor,TRUE
+01-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,235,117,196,65,1.79,34,61,9,High,High,High,Poor,TRUE
+02-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,238,118,198,65,1.8,34,61,9,High,High,High,Poor,TRUE
+03-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,241,119,200,65,1.81,34,61,9,High,High,High,Poor,TRUE
+04-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,244,121,202,66,1.83,34,61,9,High,High,High,Poor,TRUE
+05-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,235,117,196,65,1.79,34,61,9,High,High,High,Poor,TRUE
+06-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,238,118,198,65,1.8,34,61,9,High,High,High,Poor,TRUE
+07-07-2026,Lucknow,Uttar Pradesh,Normal,26.8467,80.9462,241,119,200,65,1.81,34,61,9,High,High,High,Poor,TRUE
+01-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,305,154,251,77,2.14,35,58,7,High,High,High,Very Poor,TRUE
+02-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,308,156,254,77,2.15,35,58,7,High,High,High,Very Poor,TRUE
+03-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,311,158,256,78,2.17,35,58,7,High,High,High,Very Poor,TRUE
+04-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,314,159,258,78,2.18,35,58,7,High,High,High,Very Poor,TRUE
+05-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,305,154,251,77,2.14,35,58,7,High,High,High,Very Poor,TRUE
+06-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,308,156,254,77,2.15,35,58,7,High,High,High,Very Poor,TRUE
+07-07-2026,Lucknow,Uttar Pradesh,Festival,26.8467,80.9462,311,158,256,78,2.17,35,58,7,High,High,High,Very Poor,TRUE
+01-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,175,84,148,54,1.49,33,69,13,Low,High,High,Moderate,FALSE
+02-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,178,85,150,55,1.5,33,69,13,Low,High,High,Moderate,FALSE
+03-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,181,87,153,55,1.52,33,69,13,Low,High,High,Moderate,FALSE
+04-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,184,89,155,56,1.53,33,69,13,Low,High,High,Moderate,FALSE
+05-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,175,84,148,54,1.49,33,69,13,Low,High,High,Moderate,FALSE
+06-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,178,85,150,55,1.5,33,69,13,Low,High,High,Moderate,FALSE
+07-07-2026,Lucknow,Uttar Pradesh,Rainy,26.8467,80.9462,181,87,153,55,1.52,33,69,13,Low,High,High,Moderate,FALSE
+01-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,275,138,227,71,1.99,34,61,9,High,High,High,Poor,TRUE
+02-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,278,140,230,72,2,34,61,9,High,High,High,Poor,TRUE
+03-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,281,141,232,72,2.02,34,61,9,High,High,High,Poor,TRUE
+04-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,284,143,234,73,2.03,34,61,9,High,High,High,Poor,TRUE
+05-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,275,138,227,71,1.99,34,61,9,High,High,High,Poor,TRUE
+06-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,278,140,230,72,2,34,61,9,High,High,High,Poor,TRUE
+07-07-2026,Lucknow,Uttar Pradesh,Industrial Peak,26.8467,80.9462,281,141,232,72,2.02,34,61,9,High,High,High,Poor,TRUE

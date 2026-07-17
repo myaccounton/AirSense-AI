@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HiBell, HiMagnifyingGlass, HiSun, HiMoon, HiBars3 } from 'react-icons/hi2';
 
@@ -13,6 +13,7 @@ interface NavbarProps {
 export default function Navbar({ onToggleSidebar }: NavbarProps) {
   const [darkMode, setDarkMode] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
   const isLanding = location.pathname === '/';
 
   return (
@@ -110,6 +111,16 @@ export default function Navbar({ onToggleSidebar }: NavbarProps) {
               fontFamily: 'inherit',
             }}
             id="navbar-search"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                const val = (e.target as HTMLInputElement).value.trim();
+                if (val) {
+                  const formattedVal = val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
+                  localStorage.setItem('selectedCity', formattedVal);
+                  navigate(`/dashboard/${formattedVal}`);
+                }
+              }
+            }}
           />
           <kbd style={{
             padding: '2px 6px',
