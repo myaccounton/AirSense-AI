@@ -1,0 +1,21 @@
+{
+  "current": {
+    "temperature": 34,
+    "feelsLike": 38,
+    "humidity": 68,
+    "windSpeed": 12,
+    "windDirection": "NW",
+    "pressure": 1008,
+    "visibility": 4.5,
+    "uvIndex": 8,
+    "condition": "Hazy",
+    "icon": "haze"
+  },
+  "forecast": [
+    { "day": "Today", "high": 36, "low": 28, "condition": "Hazy", "aqi": 182 },
+    { "day": "Tomorrow", "high": 35, "low": 27, "condition": "Partly Cloudy", "aqi": 175 },
+    { "day": "Wed", "high": 33, "low": 26, "condition": "Cloudy", "aqi": 168 },
+    { "day": "Thu", "high": 31, "low": 25, "condition": "Light Rain", "aqi": 145 },
+    { "day": "Fri", "high": 32, "low": 26, "condition": "Sunny", "aqi": 155 }
+  ]
+}

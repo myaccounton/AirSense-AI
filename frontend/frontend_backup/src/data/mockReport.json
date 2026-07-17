@@ -1,0 +1,48 @@
+{
+  "reportId": "RPT-2026-07-17-001",
+  "generatedAt": "2026-07-17T14:30:00Z",
+  "city": "New Delhi",
+  "region": "Central Delhi",
+  "period": "Daily Report — July 17, 2026",
+  "sections": {
+    "currentAQI": {
+      "title": "Current Air Quality Index",
+      "aqi": 182,
+      "category": "Poor",
+      "description": "The current AQI stands at 182, categorized as 'Poor'. Fine particulate matter (PM2.5) is the dominant pollutant at 128 µg/m³, significantly exceeding the WHO recommended limit of 15 µg/m³."
+    },
+    "forecast": {
+      "title": "24-Hour AQI Forecast",
+      "description": "AQI is expected to peak at 195 around 6 PM due to evening traffic congestion and reduced wind speeds. A gradual improvement is expected post-midnight as traffic subsides.",
+      "peakAQI": 195,
+      "peakTime": "6:00 PM",
+      "values": [170, 175, 183, 188, 190, 195, 185, 172]
+    },
+    "analysis": {
+      "title": "AI Pollution Analysis",
+      "description": "Multi-factor analysis indicates that 38% of current pollution is attributed to vehicular emissions, followed by construction activity (24%) and industrial sources (18%). Temperature inversions and low wind speeds are exacerbating pollutant accumulation.",
+      "topSources": ["Traffic & Vehicles (38%)", "Construction (24%)", "Industrial (18%)"]
+    },
+    "municipal": {
+      "title": "Municipal Action Items",
+      "description": "Based on AI analysis, the following priority actions are recommended for immediate implementation by city authorities.",
+      "actions": [
+        "Restrict heavy vehicle movement during 6AM-10AM and 4PM-8PM",
+        "Deploy water tankers on major roads near construction zones",
+        "Conduct surprise inspections of active construction sites",
+        "Increase public transport frequency during peak hours"
+      ]
+    },
+    "health": {
+      "title": "Citizen Health Advisory",
+      "description": "Current air quality poses significant health risks. All citizens are advised to take precautionary measures.",
+      "advisories": [
+        "Avoid outdoor exercise and physical activities",
+        "Wear N95 masks when outdoors",
+        "Asthma patients: keep inhalers accessible",
+        "Use HEPA air purifiers indoors",
+        "Keep children and elderly indoors during peak hours"
+      ]
+    }
+  }
+}

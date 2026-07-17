@@ -1,0 +1,157 @@
+{
+  "current": {
+    "aqi": 182,
+    "category": "Poor",
+    "dominantPollutant": "PM2.5",
+    "lastUpdated": "2026-07-17T14:30:00Z",
+    "pollutants": {
+      "pm25": 128,
+      "pm10": 170,
+      "no2": 52,
+      "co": 1.1,
+      "so2": 18,
+      "o3": 34
+    }
+  },
+  "forecast": [
+    { "hour": "6 AM", "aqi": 155 },
+    { "hour": "8 AM", "aqi": 170 },
+    { "hour": "10 AM", "aqi": 175 },
+    { "hour": "12 PM", "aqi": 183 },
+    { "hour": "2 PM", "aqi": 188 },
+    { "hour": "4 PM", "aqi": 190 },
+    { "hour": "6 PM", "aqi": 195 },
+    { "hour": "8 PM", "aqi": 185 },
+    { "hour": "10 PM", "aqi": 172 }
+  ],
+  "trends": {
+    "aqi": [
+      { "date": "Jul 11", "value": 145 },
+      { "date": "Jul 12", "value": 158 },
+      { "date": "Jul 13", "value": 162 },
+      { "date": "Jul 14", "value": 170 },
+      { "date": "Jul 15", "value": 175 },
+      { "date": "Jul 16", "value": 180 },
+      { "date": "Jul 17", "value": 182 }
+    ],
+    "pm25": [
+      { "date": "Jul 11", "value": 95 },
+      { "date": "Jul 12", "value": 105 },
+      { "date": "Jul 13", "value": 112 },
+      { "date": "Jul 14", "value": 118 },
+      { "date": "Jul 15", "value": 122 },
+      { "date": "Jul 16", "value": 125 },
+      { "date": "Jul 17", "value": 128 }
+    ],
+    "pm10": [
+      { "date": "Jul 11", "value": 130 },
+      { "date": "Jul 12", "value": 142 },
+      { "date": "Jul 13", "value": 148 },
+      { "date": "Jul 14", "value": 155 },
+      { "date": "Jul 15", "value": 160 },
+      { "date": "Jul 16", "value": 165 },
+      { "date": "Jul 17", "value": 170 }
+    ],
+    "no2": [
+      { "date": "Jul 11", "value": 35 },
+      { "date": "Jul 12", "value": 38 },
+      { "date": "Jul 13", "value": 42 },
+      { "date": "Jul 14", "value": 45 },
+      { "date": "Jul 15", "value": 48 },
+      { "date": "Jul 16", "value": 50 },
+      { "date": "Jul 17", "value": 52 }
+    ]
+  },
+  "mapLocations": [
+    {
+      "id": 1,
+      "name": "Connaught Place",
+      "lat": 28.6315,
+      "lng": 77.2167,
+      "aqi": 182,
+      "pollutant": "PM2.5",
+      "status": "Poor",
+      "color": "#f97316"
+    },
+    {
+      "id": 2,
+      "name": "India Gate",
+      "lat": 28.6129,
+      "lng": 77.2295,
+      "aqi": 165,
+      "pollutant": "PM10",
+      "status": "Poor",
+      "color": "#f97316"
+    },
+    {
+      "id": 3,
+      "name": "Karol Bagh",
+      "lat": 28.6514,
+      "lng": 77.1907,
+      "aqi": 210,
+      "pollutant": "PM2.5",
+      "status": "Very Poor",
+      "color": "#ef4444"
+    },
+    {
+      "id": 4,
+      "name": "Lodhi Garden",
+      "lat": 28.5931,
+      "lng": 77.2197,
+      "aqi": 95,
+      "pollutant": "PM10",
+      "status": "Moderate",
+      "color": "#eab308"
+    },
+    {
+      "id": 5,
+      "name": "Nehru Place",
+      "lat": 28.5491,
+      "lng": 77.2533,
+      "aqi": 198,
+      "pollutant": "PM2.5",
+      "status": "Poor",
+      "color": "#f97316"
+    },
+    {
+      "id": 6,
+      "name": "Dwarka Sector 21",
+      "lat": 28.5562,
+      "lng": 77.0586,
+      "aqi": 142,
+      "pollutant": "PM10",
+      "status": "Poor",
+      "color": "#f97316"
+    },
+    {
+      "id": 7,
+      "name": "IIT Delhi",
+      "lat": 28.5459,
+      "lng": 77.1926,
+      "aqi": 78,
+      "pollutant": "O3",
+      "status": "Moderate",
+      "color": "#eab308"
+    },
+    {
+      "id": 8,
+      "name": "Rohini Sector 16",
+      "lat": 28.7331,
+      "lng": 77.1143,
+      "aqi": 225,
+      "pollutant": "PM2.5",
+      "status": "Very Poor",
+      "color": "#ef4444"
+    },
+    {
+      "id": 9,
+      "name": "Vasant Kunj",
+      "lat": 28.5195,
+      "lng": 77.1570,
+      "aqi": 48,
+      "pollutant": "O3",
+      "status": "Good",
+      "color": "#22c55e"
+    }
+  ]
+}

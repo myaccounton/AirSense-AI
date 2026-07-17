@@ -1,0 +1,127 @@
+{
+  "summary": "Air quality has deteriorated significantly over the past 48 hours due to a combination of increased vehicular emissions, active construction zones, and unfavorable meteorological conditions trapping pollutants at ground level. The dominant pollutant PM2.5 has exceeded safe limits by 8.5x, indicating severe respiratory health risks for vulnerable populations.",
+  "aqiIncrease": {
+    "reason": "The AQI increased from 145 to 182 over the past week due to a convergence of factors: increased traffic congestion from road construction on Ring Road, reduced wind speeds limiting pollutant dispersion, and elevated industrial activity in the Okhla industrial belt. Temperature inversions in early morning hours are trapping pollutants close to ground level.",
+    "confidence": 87
+  },
+  "dominantPollutants": [
+    { "name": "PM2.5", "value": 128, "limit": 15, "percentage": 95, "trend": "rising" },
+    { "name": "PM10", "value": 170, "limit": 45, "percentage": 82, "trend": "rising" },
+    { "name": "NO2", "value": 52, "limit": 25, "percentage": 68, "trend": "stable" },
+    { "name": "CO", "value": 1.1, "limit": 2, "percentage": 45, "trend": "stable" },
+    { "name": "SO2", "value": 18, "limit": 20, "percentage": 32, "trend": "falling" },
+    { "name": "O3", "value": 34, "limit": 50, "percentage": 28, "trend": "rising" }
+  ],
+  "sourceAttribution": [
+    { "source": "Traffic & Vehicles", "percentage": 38, "icon": "traffic" },
+    { "source": "Construction Activity", "percentage": 24, "icon": "construction" },
+    { "source": "Industrial Emissions", "percentage": 18, "icon": "industry" },
+    { "source": "Waste Burning", "percentage": 12, "icon": "fire" },
+    { "source": "Seasonal / Natural", "percentage": 8, "icon": "leaf" }
+  ],
+  "riskLevel": {
+    "level": "High",
+    "score": 78,
+    "description": "Current air quality poses significant health risks. Sensitive groups should avoid outdoor activities. General population may experience respiratory discomfort."
+  },
+  "municipalRecommendations": [
+    {
+      "id": 1,
+      "title": "Restrict Heavy Vehicle Movement",
+      "description": "Implement temporary restrictions on heavy commercial vehicles within city limits during peak pollution hours (6 AM - 10 AM, 4 PM - 8 PM).",
+      "priority": "Critical",
+      "icon": "truck",
+      "impact": "Could reduce PM10 levels by 15-20%"
+    },
+    {
+      "id": 2,
+      "title": "Increase Water Sprinkling",
+      "description": "Deploy water tankers for road sprinkling on major arterial roads to suppress dust re-suspension, particularly near active construction zones.",
+      "priority": "High",
+      "icon": "water",
+      "impact": "Could reduce dust levels by 25-30%"
+    },
+    {
+      "id": 3,
+      "title": "Inspect Construction Sites",
+      "description": "Conduct surprise inspections of construction sites to ensure compliance with dust control measures including wet drilling and covered material storage.",
+      "priority": "High",
+      "icon": "building",
+      "impact": "Could reduce local PM levels by 10-15%"
+    },
+    {
+      "id": 4,
+      "title": "Monitor Industrial Emissions",
+      "description": "Deploy mobile monitoring units near industrial areas in Okhla and surrounding zones to identify non-compliant emission sources.",
+      "priority": "Medium",
+      "icon": "factory",
+      "impact": "Could identify 30-40% of emission violators"
+    },
+    {
+      "id": 5,
+      "title": "Enhance Public Transport",
+      "description": "Increase frequency of metro and bus services during peak hours to reduce private vehicle usage and associated emissions.",
+      "priority": "Medium",
+      "icon": "bus",
+      "impact": "Could reduce vehicular emissions by 8-12%"
+    },
+    {
+      "id": 6,
+      "title": "Green Belt Maintenance",
+      "description": "Accelerate tree plantation drives along highways and within residential zones to create natural air filtration corridors.",
+      "priority": "Low",
+      "icon": "tree",
+      "impact": "Long-term PM reduction of 5-8%"
+    }
+  ],
+  "healthAdvisory": [
+    {
+      "id": 1,
+      "title": "Avoid Outdoor Exercise",
+      "description": "Postpone all outdoor physical activities including jogging, cycling, and sports. Use indoor gyms with air filtration systems.",
+      "priority": "Critical",
+      "icon": "running",
+      "forGroup": "General Population"
+    },
+    {
+      "id": 2,
+      "title": "Wear N95 Mask Outdoors",
+      "description": "Use certified N95 or KN95 masks when going outdoors. Regular cloth masks do not filter PM2.5 particles effectively.",
+      "priority": "Critical",
+      "icon": "mask",
+      "forGroup": "General Population"
+    },
+    {
+      "id": 3,
+      "title": "Reduce Outdoor Activities",
+      "description": "Minimize time spent outdoors, especially during morning and evening rush hours when pollution levels peak.",
+      "priority": "High",
+      "icon": "home",
+      "forGroup": "General Population"
+    },
+    {
+      "id": 4,
+      "title": "Asthma Patient Alert",
+      "description": "Asthma patients should keep rescue inhalers accessible at all times. Consider doubling preventive medication dosage after consulting physician.",
+      "priority": "Critical",
+      "icon": "lungs",
+      "forGroup": "Sensitive Groups"
+    },
+    {
+      "id": 5,
+      "title": "Children & Elderly Advisory",
+      "description": "Keep children indoors during school breaks. Elderly citizens should avoid morning walks until air quality improves.",
+      "priority": "High",
+      "icon": "shield",
+      "forGroup": "Vulnerable Groups"
+    },
+    {
+      "id": 6,
+      "title": "Use Air Purifiers Indoors",
+      "description": "Run HEPA air purifiers in bedrooms and living areas. Keep windows and doors sealed to prevent outdoor air infiltration.",
+      "priority": "Medium",
+      "icon": "wind",
+      "forGroup": "General Population"
+    }
+  ]
+}
