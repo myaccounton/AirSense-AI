@@ -92,27 +92,33 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
 
 ### 🏠 Landing Page
 
-- ![Landing Page](./screenshots/landing.png)
+ ![Landing Page](./screenshots/landing.png)
 
 ### 🌍 City Selection
 
-- ![City Selection](./screenshots/city_selection.png)
+ ![City Selection](./screenshots/city_selection.png)
 
   ### 📊 Dashboard
   
-- ![Dashboard](./screenshots/dashboard.png)
-- ![Dashboard](./screenshots/dashboard2.png)
--![Dashboard](./screenshots/dashboard3.png)
+ ![Dashboard](./screenshots/dashboard.png)
+ ![Dashboard](./screenshots/dashboard2.png)
+ ![Dashboard](./screenshots/dashboard3.png)
 
 
   ### 🤖 AI Analysis
-- **AI Root Cause & Recommendations:** `![AI Analysis](link-to-image)`
+  
+![AI Analysis](./screenshots/analysis.png)
+![AI Analysis](./screenshots/analysis2.png)
+![AI Analysis](./screenshots/analysis3.png)
 
 ### 🧪 Scenario Simulator
 
+![Scenario Simulator](./screenshots/scenario.png)
 
 ### 📄 AI Intervention Report
-- ![Report](screenshots/report.png)
+![Report](./screenshots/report.png)
+
+📥 **Full Report:** [AirSense_AI_Intervention_Report.pdf](./docs/AirSense_Report_Kolkata_2026-07-19.pdf)
 
 ---
 
