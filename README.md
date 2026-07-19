@@ -88,7 +88,7 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
 ## 📸 Screenshots
 
 *(Add your screenshots here before submitting!)*
-- **Landing Page:** `![Landing View](screenshots/landing.png)`
+- **Landing Page:** `![Landing View](/screenshots/landing.png)`
 - **Dashboard Overview:** `![Dashboard View](screenshots/dashboard.png)`
 - **AI Root Cause & Recommendations:** `![AI Analysis](link-to-image)`
 - **Interactive Map & Risk Zones:** `![Map View](link-to-image)`
