@@ -3,7 +3,7 @@ import { runOrchestrator } from './orchestrator.service.js';
 import CacheService from './cache.service.js';
 import Logger from '../utils/logger.js';
 
-// Store ongoing/active Gemini request promises to deduplicate parallel requests
+// Store ongoing/active Groq request promises to deduplicate parallel requests
 const activeRequests = new Map();
 
 /**
@@ -14,7 +14,7 @@ const activeRequests = new Map();
 export const analyzeCity = async (city) => {
   const normalizedCity = city.trim().toLowerCase();
 
-  // 1. Check in-memory cache to prevent duplicate Gemini API calls
+  // 1. Check in-memory cache to prevent duplicate Groq API calls
   const cachedAnalysis = CacheService.get(normalizedCity);
   if (cachedAnalysis) {
     return cachedAnalysis;
@@ -22,7 +22,7 @@ export const analyzeCity = async (city) => {
 
   // 2. Coalesce concurrent requests for the same city to prevent parallel misses
   if (activeRequests.has(normalizedCity)) {
-    Logger.info(`Reusing active Gemini request promise for city: ${normalizedCity}`);
+    Logger.info(`Reusing active Groq request promise for city: ${normalizedCity}`);
     return activeRequests.get(normalizedCity);
   }
 
@@ -33,17 +33,18 @@ export const analyzeCity = async (city) => {
       const scenarioData = await getScenarioByCity(city);
 
       // Pass scenario data to AI Orchestrator and log response time
-      Logger.info(`Requesting Gemini analysis for: ${scenarioData.city}`);
+      Logger.info(`Requesting Groq analysis for: ${scenarioData.city}`);
       
       const startTime = Date.now();
       const orchestratorResult = await runOrchestrator(scenarioData);
       const endTime = Date.now();
       
       const duration = endTime - startTime;
-      Logger.info(`Gemini API response time for '${scenarioData.city}': ${duration}ms`);
+      Logger.info(`Groq API response time for '${scenarioData.city}': ${duration}ms`);
 
       const finalResult = {
         city: scenarioData.city,
+        state: scenarioData.state,
         ...orchestratorResult
       };
 

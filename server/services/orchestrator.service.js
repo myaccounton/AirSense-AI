@@ -1,4 +1,4 @@
-import { generateJSONContent } from '../config/gemini.js';
+import { generateJSONContent } from '../config/groq.js';
 import { getAnalysisPrompt } from '../prompts/analysis.prompt.js';
 
 /**
@@ -9,13 +9,11 @@ import { getAnalysisPrompt } from '../prompts/analysis.prompt.js';
 export const runOrchestrator = async (scenarioData) => {
   const prompt = getAnalysisPrompt(scenarioData);
   const analysisResult = await generateJSONContent(prompt);
+  return analysisResult;
+};
 
-  return {
-    aqiSummary: analysisResult.aqiSummary || '',
-    weatherImpact: analysisResult.weatherImpact || '',
-    pollutionReason: analysisResult.pollutionReason || '',
-    majorSources: analysisResult.majorSources || [],
-    recommendations: analysisResult.recommendations || [],
-    healthAdvice: analysisResult.healthAdvice || []
-  };
+export const runSimulation = async (scenarioData, action) => {
+  const prompt = await import('../prompts/scenario.prompt.js').then(m => m.getScenarioPrompt(scenarioData, action));
+  const simulationResult = await generateJSONContent(prompt);
+  return simulationResult;
 };

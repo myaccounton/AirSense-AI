@@ -1,6 +1,6 @@
 # AirSense AI - Backend API Documentation
 
-AirSense AI is a production-quality Node.js backend built on Express, integrated with the Google Gemini API (`@google/genai`) to generate structured, real-time air quality analyses, meteorology correlations, and municipal recommendations for smart city planning.
+AirSense AI is a production-quality Node.js backend built on Express, integrated with the Groq API (`groq-sdk`) to generate structured, real-time air quality analyses, meteorology correlations, and municipal recommendations for smart city planning.
 
 ---
 
@@ -9,7 +9,7 @@ The backend follows a strict **Controller → Service → Route** pattern:
 - **Routes**: Handle routing declarations and bind request validation middleware.
 - **Middleware**: Intercepts requests for logging (`requestLogger`), validation (`validateCityRequest`), and global error mapping (`errorHandler`).
 - **Controllers**: Handle request extraction and map standardized JSON outputs (`ApiResponse`).
-- **Services**: Execute database/file scenario resolutions, cache interactions, and coordinates Google Gemini AI Orchestration.
+- **Services**: Execute database/file scenario resolutions, cache interactions, and coordinates Groq AI Orchestration.
 - **Scenarios**: JSON files containing environmental parameters for supported cities.
 
 ---
@@ -132,7 +132,7 @@ All failures return a standard envelope and hide internal stack traces:
 
 ### 3. Analyze Air Quality scenario
 * **Endpoint**: `POST /api/analyze`
-* **Purpose**: Generates a unified, dashboard-optimized Gemini AI analysis mapping the weather, AQI trends, main pollution drivers, policy advice, and health tips.
+* **Purpose**: Generates a unified, dashboard-optimized Groq AI analysis mapping the weather, AQI trends, main pollution drivers, policy advice, and health tips.
 * **Request Headers**: `Content-Type: application/json`
 * **Request Body**:
   ```json
@@ -185,13 +185,13 @@ All failures return a standard envelope and hide internal stack traces:
       }
     }
     ```
-  - `429 Too Many Requests`: Triggered when Google Gemini API quota limits are exceeded.
+  - `429 Too Many Requests`: Triggered when Groq API quota limits are exceeded.
     ```json
     {
       "success": false,
       "message": "AI quota exceeded. Please try again later.",
       "error": {
-        "detail": "Google Gemini API quota or rate limit exceeded. Please try again later."
+        "detail": "Groq API quota or rate limit exceeded. Please try again later."
       }
     }
     ```
@@ -201,7 +201,7 @@ All failures return a standard envelope and hide internal stack traces:
       "success": false,
       "message": "AI Service is currently unavailable. Please check backend config.",
       "error": {
-        "detail": "Authentication failed. Please verify your GEMINI_API_KEY configuration."
+        "detail": "Authentication failed. Please verify your GROQ_API_KEY configuration."
       }
     }
     ```
@@ -265,7 +265,7 @@ All failures return a standard envelope and hide internal stack traces:
 ---
 
 ## In-Memory Caching & Performance
-To avoid redundant Google Gemini API calls during hackathon demos, the server implements an in-memory cache.
+To avoid redundant Groq API calls during hackathon demos, the server implements an in-memory cache.
 - The cache resolves queries using lowercase, trimmed city keys.
-- Subsequent calls to `/api/analyze` or `/api/report` for the same city retrieve stored reports instantly, showing **0ms** Gemini API response time.
+- Subsequent calls to `/api/analyze` or `/api/report` for the same city retrieve stored reports instantly, showing **0ms** Groq API response time.
 - The cache survives for the duration of the server runtime.

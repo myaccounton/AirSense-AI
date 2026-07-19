@@ -46,6 +46,7 @@ const mapRowToScenario = (row) => {
 
   return {
     city: row.City,
+    state: row.State || 'Unknown',
     aqi: aqi,
     category: category,
     temperature: parseInt(row.Temperature, 10) || 25,
@@ -55,6 +56,8 @@ const mapRowToScenario = (row) => {
     visibility: parseInt(row.Visibility, 10) || 5,
     latitude: parseFloat(row.Latitude) || 28.6139,
     longitude: parseFloat(row.Longitude) || 77.209,
+    riskZone: row.RiskZone || 'Low',
+    hotspot: row.Hotspot || 'None',
     pollutants: {
       pm25: parseInt(row['PM2.5'], 10) || 0,
       pm10: parseInt(row.PM10, 10) || 0,
@@ -177,5 +180,19 @@ export const getLatestScenario = (city) => {
   });
 
   const latestRecord = sortedRecords[0];
-  return mapRowToScenario(latestRecord);
+  const scenarioObj = mapRowToScenario(latestRecord);
+
+  // Include the full historical weekly records in ascending date order
+  const sortedRecordsAsc = [...cityRecords].sort((a, b) => parseCSVDate(a.Date) - parseCSVDate(b.Date));
+  scenarioObj.weeklyRecords = sortedRecordsAsc.map(r => ({
+    date: r.Date,
+    aqi: parseInt(r.AQI, 10) || 0,
+    pm25: parseInt(r['PM2.5'], 10) || 0,
+    pm10: parseInt(r.PM10, 10) || 0,
+    no2: parseInt(r.NO2, 10) || 0,
+    temperature: parseInt(r.Temperature, 10) || 25,
+    humidity: parseInt(r.Humidity, 10) || 50
+  }));
+
+  return scenarioObj;
 };

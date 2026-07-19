@@ -3,6 +3,7 @@ import { getCitiesController } from '../controllers/city.controller.js';
 import { getScenarioController } from '../controllers/scenario.controller.js';
 import { analyzeCityController } from '../controllers/analysis.controller.js';
 import { generateReportController } from '../controllers/report.controller.js';
+import { simulateScenarioController } from '../controllers/simulate.controller.js';
 import { validateCityRequest } from '../middleware/validation.middleware.js';
 
 const router = Router();
@@ -18,5 +19,8 @@ router.post('/analyze', validateCityRequest, analyzeCityController);
 
 // POST /api/report (Validated)
 router.post('/report', validateCityRequest, generateReportController);
+
+// POST /api/simulate
+router.post('/simulate', simulateScenarioController);
 
 export default router;

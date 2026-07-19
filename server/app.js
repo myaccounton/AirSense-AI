@@ -1,5 +1,5 @@
 import express from 'express';
-import './config/gemini.config.js';
+import './config/groq.config.js';
 import cors from 'cors';
 import apiRoutes from './routes/api.routes.js';
 import { requestLogger } from './middleware/logger.middleware.js';

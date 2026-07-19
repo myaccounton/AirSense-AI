@@ -1,4 +1,4 @@
-import { generateAIContent } from '../../config/gemini.js';
+import { generateAIContent } from '../../config/groq.js';
 import { getPollutionPrompt } from '../../prompts/pollution.prompt.js';
 
 /**

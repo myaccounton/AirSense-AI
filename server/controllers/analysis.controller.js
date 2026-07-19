@@ -14,15 +14,16 @@ export const analyzeCityController = async (req, res, next) => {
 
     const analysisData = await analyzeCity(city);
     
-    // Format response without extra nesting, exactly as required for the frontend
+    // Format response exactly as required for the frontend
     const responsePayload = {
       city: analysisData.city,
-      aqiSummary: analysisData.aqiSummary,
-      weatherImpact: analysisData.weatherImpact,
-      pollutionReason: analysisData.pollutionReason,
-      majorSources: analysisData.majorSources,
+      state: analysisData.state,
+      executiveSummary: analysisData.executiveSummary,
+      confidence: analysisData.confidence,
+      rootCauseAnalysis: analysisData.rootCauseAnalysis,
       recommendations: analysisData.recommendations,
-      healthAdvice: analysisData.healthAdvice
+      predictionTimeline: analysisData.predictionTimeline,
+      citizenAdvice: analysisData.citizenAdvice
     };
 
     return ApiResponse.success(res, 'Analysis completed successfully.', responsePayload);
