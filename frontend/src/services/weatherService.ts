@@ -23,10 +23,13 @@ export const weatherService = {
         condition: scenario.aqi > 200 ? "Hazy" : "Clear",
         icon: scenario.aqi > 200 ? "haze" : "sunny"
       },
-      forecast: [
-        { day: "Today", high: scenario.temperature + 2, low: scenario.temperature - 4, condition: "Hazy", aqi: scenario.aqi },
-        { day: "Tomorrow", high: scenario.temperature + 1, low: scenario.temperature - 5, condition: "Clear", aqi: scenario.forecast?.tomorrowAQI || scenario.aqi }
-      ]
+      forecast: scenario.weeklyRecords ? scenario.weeklyRecords.map((r: any) => ({
+        day: r.date,
+        high: r.temperature + 2,
+        low: r.temperature - 4,
+        condition: r.aqi > 200 ? "Hazy" : "Clear",
+        aqi: r.aqi
+      })) : []
     };
   },
 

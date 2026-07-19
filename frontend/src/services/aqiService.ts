@@ -36,43 +36,13 @@ export const aqiService = {
         { hour: "8 PM", aqi: Math.max(0, Math.round(scenario.aqi * 1.02)) },
         { hour: "10 PM", aqi: Math.max(0, Math.round(scenario.aqi * 0.98)) }
       ],
-      trends: {
-        aqi: [
-          { date: "Jul 11", value: Math.max(0, Math.round(scenario.aqi * 0.8)) },
-          { date: "Jul 12", value: Math.max(0, Math.round(scenario.aqi * 0.85)) },
-          { date: "Jul 13", value: Math.max(0, Math.round(scenario.aqi * 0.9)) },
-          { date: "Jul 14", value: Math.max(0, Math.round(scenario.aqi * 0.93)) },
-          { date: "Jul 15", value: Math.max(0, Math.round(scenario.aqi * 0.96)) },
-          { date: "Jul 16", value: Math.max(0, Math.round(scenario.aqi * 0.98)) },
-          { date: "Jul 17", value: scenario.aqi }
-        ],
-        pm25: [
-          { date: "Jul 11", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.8)) },
-          { date: "Jul 12", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.85)) },
-          { date: "Jul 13", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.9)) },
-          { date: "Jul 14", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.93)) },
-          { date: "Jul 15", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.96)) },
-          { date: "Jul 16", value: Math.max(0, Math.round(scenario.pollutants?.pm25 * 0.98)) },
-          { date: "Jul 17", value: scenario.pollutants?.pm25 }
-        ],
-        pm10: [
-          { date: "Jul 11", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.8)) },
-          { date: "Jul 12", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.85)) },
-          { date: "Jul 13", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.9)) },
-          { date: "Jul 14", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.93)) },
-          { date: "Jul 15", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.96)) },
-          { date: "Jul 16", value: Math.max(0, Math.round(scenario.pollutants?.pm10 * 0.98)) },
-          { date: "Jul 17", value: scenario.pollutants?.pm10 }
-        ],
-        no2: [
-          { date: "Jul 11", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.8)) },
-          { date: "Jul 12", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.85)) },
-          { date: "Jul 13", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.9)) },
-          { date: "Jul 14", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.93)) },
-          { date: "Jul 15", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.96)) },
-          { date: "Jul 16", value: Math.max(0, Math.round(scenario.pollutants?.no2 * 0.98)) },
-          { date: "Jul 17", value: scenario.pollutants?.no2 }
-        ]
+      trends: scenario.weeklyRecords ? {
+        aqi: scenario.weeklyRecords.map((r: any) => ({ date: r.date, value: r.aqi })),
+        pm25: scenario.weeklyRecords.map((r: any) => ({ date: r.date, value: r.pm25 })),
+        pm10: scenario.weeklyRecords.map((r: any) => ({ date: r.date, value: r.pm10 })),
+        no2: scenario.weeklyRecords.map((r: any) => ({ date: r.date, value: r.no2 })),
+      } : {
+        aqi: [], pm25: [], pm10: [], no2: []
       },
       mapLocations: [
         {
@@ -83,7 +53,9 @@ export const aqiService = {
           aqi: scenario.aqi,
           pollutant: "PM2.5",
           status: scenario.category,
-          color: scenario.aqi > 300 ? "#ef4444" : scenario.aqi > 200 ? "#f97316" : "#eab308"
+          color: scenario.aqi > 300 ? "#ef4444" : scenario.aqi > 200 ? "#f97316" : "#eab308",
+          riskZone: scenario.riskZone || "Low",
+          hotspot: scenario.hotspot || "None"
         }
       ]
     };

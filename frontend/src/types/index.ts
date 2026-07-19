@@ -37,6 +37,8 @@ export interface MapLocation {
   pollutant: string;
   status: string;
   color: string;
+  riskZone: string;
+  hotspot: string;
 }
 
 export interface AQIData {
@@ -78,76 +80,82 @@ export interface WeatherData {
   forecast: WeatherForecastDay[];
 }
 
-// ===== Analysis Types =====
-export interface DominantPollutant {
-  name: string;
-  value: number;
-  limit: number;
-  percentage: number;
-  trend: 'rising' | 'stable' | 'falling';
+// ===== Analysis Types (Production AI Support) =====
+
+export interface ExecutiveSummary {
+  currentAQI: number;
+  riskLevel: string;
+  dominantPollutant: string;
+  overallSituation: string;
+  expectedTrend: string;
+  confidenceScore: number;
 }
 
-export interface SourceAttribution {
-  source: string;
-  percentage: number;
-  icon: string;
-}
-
-export interface RiskLevel {
-  level: string;
+export interface ConfidenceScore {
   score: number;
-  description: string;
+  dataQuality: string;
+  forecastReliability: string;
+  model: string;
+  reason: string;
 }
 
-export interface Recommendation {
-  id: number;
-  title: string;
-  description: string;
-  priority: 'Critical' | 'High' | 'Medium' | 'Low';
-  icon: string;
-  impact?: string;
+export interface RootCause {
+  source: string;
+  contribution: number;
+  evidence: string[];
+  reasoning: string;
+  impactLevel: string;
 }
 
-export interface HealthAdvisory {
-  id: number;
+export interface RecommendationImpact {
   title: string;
-  description: string;
-  priority: 'Critical' | 'High' | 'Medium' | 'Low';
-  icon: string;
-  forGroup: string;
+  priority: string;
+  estimatedAQIReduction: number;
+  implementationDifficulty: string;
+  expectedTime: string;
+  reason: string;
+}
+
+export interface TimelinePrediction {
+  timeframe: string;
+  predictedAQI: number;
+  risk: string;
+  explanation: string;
+}
+
+export interface CitizenAdvisory {
+  group: string;
+  risk: string;
+  recommendation: string;
+  urgency: string;
 }
 
 export interface AnalysisData {
-  summary: string;
-  aqiIncrease: {
-    reason: string;
-    confidence: number;
-  };
-  dominantPollutants: DominantPollutant[];
-  sourceAttribution: SourceAttribution[];
-  riskLevel: RiskLevel;
-  municipalRecommendations: Recommendation[];
-  healthAdvisory: HealthAdvisory[];
+  city?: string;
+  state?: string;
+  executiveSummary: ExecutiveSummary;
+  confidence: ConfidenceScore;
+  rootCauseAnalysis: RootCause[];
+  recommendations: RecommendationImpact[];
+  predictionTimeline: TimelinePrediction[];
+  citizenAdvice: CitizenAdvisory[];
 }
 
-// ===== Report Types =====
-export interface ReportSection {
-  title: string;
-  description: string;
-  [key: string]: unknown;
+export interface ScenarioPrediction {
+  action: string;
+  futureAQI: number;
+  improvement: string;
+  explanation: string;
 }
 
-export interface ReportData {
+export interface ReportData extends AnalysisData {
   reportId: string;
   generatedAt: string;
   city: string;
   region: string;
   period: string;
-  sections: {
-    currentAQI: ReportSection & { aqi: number; category: string };
-    forecast: ReportSection & { peakAQI: number; peakTime: string; values: number[] };
-    analysis: ReportSection & { topSources: string[] };
-    municipal: ReportSection & { actions: string[] };
-    health: ReportSection & { advisories: string[] };
+  forecast?: {
+    tomorrowAQI: number;
+    trend: string;
   };
 }

@@ -4,7 +4,7 @@ import { weatherService } from '../services/weatherService';
 import { analysisService } from '../services/analysisService';
 import type { AQIData, WeatherData, AnalysisData, ReportData } from '../types';
 
-// Session-level caches to prevent duplicate Gemini API requests on page navigation
+// Session-level caches to prevent duplicate Groq API requests on page navigation
 const analysisCache: Record<string, AnalysisData> = {};
 const reportCache: Record<string, ReportData> = {};
 
@@ -37,7 +37,7 @@ export function useMockData(city?: string) {
         setLoading(true);
         setError(null);
 
-        // Fetch basic environmental AQI and weather stats (DO NOT call Gemini here)
+        // Fetch basic environmental AQI and weather stats (DO NOT call Groq here)
         const [aqi, weather] = await Promise.all([
           aqiService.getAQIData(activeCity),
           weatherService.getWeatherData(activeCity)
@@ -63,17 +63,17 @@ export function useMockData(city?: string) {
   }, [activeCity]);
 
   /**
-   * Triggers the Gemini orchestrator to run deep pollution analysis for the city
+   * Triggers the Groq orchestrator to run deep pollution analysis for the city
    */
   const analyzeWithAI = async () => {
     const cacheKey = activeCity.toLowerCase();
     
-    // Return early if already in session cache
-    if (analysisCache[cacheKey]) {
-      setAnalysisData(analysisCache[cacheKey]);
-      setReportData(reportCache[cacheKey]);
-      return;
-    }
+    // Temporarily disabled cache for fresh AI responses
+    // if (analysisCache[cacheKey]) {
+    //   setAnalysisData(analysisCache[cacheKey]);
+    //   setReportData(reportCache[cacheKey]);
+    //   return;
+    // }
 
     try {
       setGeneratingAI(true);
@@ -92,7 +92,7 @@ export function useMockData(city?: string) {
       setAnalysisData(analysis);
       setReportData(report);
     } catch (err) {
-      console.error('Gemini analysis failed:', err);
+      console.error('Groq analysis failed:', err);
       setError(err instanceof Error ? err.message : 'AI Analysis request failed.');
     } finally {
       setGeneratingAI(false);
