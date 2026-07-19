@@ -94,9 +94,13 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
 
  ![Landing Page](./screenshots/landing.png)
 
+
+
 ### 🌍 City Selection
 
  ![City Selection](./screenshots/city_selection.png)
+
+
 
   ### 📊 Dashboard
   
@@ -105,15 +109,19 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
  ![Dashboard](./screenshots/dashboard3.png)
 
 
+
   ### 🤖 AI Analysis
   
 ![AI Analysis](./screenshots/analysis.png)
 ![AI Analysis](./screenshots/analysis2.png)
 ![AI Analysis](./screenshots/analysis3.png)
 
+
 ### 🧪 Scenario Simulator
 
 ![Scenario Simulator](./screenshots/scenario.png)
+
+
 
 ### 📄 AI Intervention Report
 ![Report](./screenshots/report.png)
