@@ -96,11 +96,13 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
 
 ### 🌍 City Selection
 
+- ![City Selection](./screenshots/city_selection.png)
 
   ### 📊 Dashboard
   
-- **Dashboard Overview:** - ![Dashboard](./screenshots/dashboard.png)
-
+- ![Dashboard](./screenshots/dashboard.png)
+- ![Dashboard](./screenshots/dashboard2.png)
+-![Dashboard](./screenshots/dashboard3.png)
 
 
   ### 🤖 AI Analysis
