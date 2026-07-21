@@ -35,6 +35,7 @@ We have transformed raw environmental data into **actionable intelligence** thro
 ### 1. 🧠 AI Decision Support Dashboard
 - **Executive AI Brief**: Groq's Llama-3 automatically synthesizes complex pollution data into a high-level situational overview.
 - **Etiology (Root Cause Analysis)**: The AI identifies the dominant contributors (e.g., Traffic, Construction, Industry), calculates their percentage contribution, and provides the meteorological and geographical reasoning behind it.
+- **Recommendation Impact**: AI-driven municipal action plans that calculate the expected AQI reduction, implementation difficulty, and estimated time frame for critical interventions (e.g., Enhancing Public Transport, Implementing Emission Controls).
 - **Data Reliability & Confidence**: Generates a confidence score based on the quality of evidence used for the analysis.
 
 ### 2. 🎮 Interactive Scenario Simulator
