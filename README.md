@@ -150,13 +150,6 @@ AirSense AI is built using a modern, decoupled architecture designed for speed a
 
 ---
 
-## 🎥 Demo Video
-
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
-*(Replace YOUR_VIDEO_ID with the actual YouTube link of your demo)*
-
----
-
 ## 🚀 Getting Started
 
 1. **Clone the repository**
